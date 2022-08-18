@@ -265,7 +265,7 @@ async function run() {
 		}
 
 		// Get range to generate diff
-		let range = pushedTag + '...' + tags[1];
+		let range = pushedTag + '...HEAD';// + tags[1];
 		if (tags.length < 2) {
 			const {stdout: rootCommit} = await execFile('git', ['rev-list', '--max-parents=0', 'HEAD']);
 			range = rootCommit.trim('') + '..' + pushedTag;
