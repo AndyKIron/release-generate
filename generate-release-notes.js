@@ -23,6 +23,7 @@ async function generateReleaseNotes({
 		sort === 'asc' && '--reverse',
 		range
 	].filter(Boolean));
+
 	commits = commits.split('\n').filter(Boolean).map(line => {
 		const [hash, date, title] = line.split('¬');
 		return {
@@ -31,6 +32,8 @@ async function generateReleaseNotes({
 			title
 		};
 	});
+
+	console.log('>>>', commits);
 
 	if (exclude) {
 		// Booleans aren't currently supported: https://github.com/actions/toolkit/issues/361

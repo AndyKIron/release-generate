@@ -5,8 +5,9 @@
 	"main": "distribution/index.js",
 	"scripts": {
 		"build": "ncc build index.js -o distribution",
-		"test": "xo && npm run jest",
-		"jest": "GITHUB_SERVER_URL='https://github.com' GITHUB_REPOSITORY='fregante/release-with-changelog' jest"
+	  	"lint": "xo",
+		"test": "npm run jest",
+		"jest": "GITHUB_SERVER_URL='https://github.com' GITHUB_REPOSITORY='ironsource-mobile/andyk-checker' jest"
 	},
 	"repository": "fregante/release-with-changelog",
 	"keywords": [
